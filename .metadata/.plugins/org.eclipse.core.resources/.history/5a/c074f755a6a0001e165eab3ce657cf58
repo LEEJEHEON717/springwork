@@ -1,0 +1,10 @@
+package com.kh.model;
+
+import lombok.Setter;
+
+@Setter
+public class UserDTO {
+	//ÇÊµå
+	private String name;
+	private int age;
+}

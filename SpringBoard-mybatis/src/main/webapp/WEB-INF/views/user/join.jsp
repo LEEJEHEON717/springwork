@@ -7,7 +7,6 @@
 <title>회원가입</title>
 </head>
 <body>
-	<h1>회원가입</h1>
 	<div id="content">
 		<h2>회원 가입</h2>
 		<form action="/user/join" method="post">

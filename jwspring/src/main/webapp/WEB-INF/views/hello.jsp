@@ -7,6 +7,6 @@
 <title>hello~</title>
 </head>
 <body>
-	<h1>안녕~ Spring</h1>	
+	<h1>안녕~ Spring</h1>
 </body>
 </html>

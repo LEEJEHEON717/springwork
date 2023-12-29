@@ -7,6 +7,6 @@
 <title>나의 정보</title>
 </head>
 <body>
-	<h2>나의 정보</h2>	
+	<h2>나의 정보</h2>
 </body>
 </html>

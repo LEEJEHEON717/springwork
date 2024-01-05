@@ -6,12 +6,11 @@ import lombok.Data;
 
 @Data
 public class BoardDTO {
-	
 	private Long id;
 	private String boardTitle;
-	private String boardWriter;
+	private String userId;
 	private String boardContent;
-	private int hit;
+	private Integer hit;
 	private Timestamp createdTime;
-	private Timestamp updateTime;
+	private Timestamp updatedTime;
 }

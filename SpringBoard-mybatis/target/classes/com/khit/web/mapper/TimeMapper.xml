@@ -8,4 +8,4 @@
 	<select id="getTime" resultType="String">
 		select now()
 	</select>
-</mapper>
+</mapper> 

@@ -64,14 +64,30 @@
 			<c:forEach items="${replyList}" var="reply">
 				<div class="reply">
 					<p>${reply.replyContent}</p>
-					<p>작성자: ${reply.replyer} (작성일:${reply.createdTime})</p>
+					작성자: ${reply.replyer}
+					<!-- 수정일이 있는 경우 수정일 표시, 없는 경우 작성일 표시 -->
+					<c:choose>
+						<c:when test="${not empty board.updatedTime }">
+				     	  (수정일: <fmt:formatDate value="${board.updatedTime}"
+								pattern="yyyy-MM-dd HH:mm:ss" />)
+						</c:when>
+						<c:otherwise>
+				     	  (작성일: <fmt:formatDate value="${board.createdTime}"
+								pattern="yyyy-MM-dd HH:mm:ss" />)
+						</c:otherwise>
+					</c:choose>
+					<p>
+						<a href="/reply/update?boardId=${board.id}&id=${reply.id}">수정</a>
+						| <a href="/reply/delete?boardId=${board.id}&id=${reply.id}"
+							onclick="return confirm('정말로 삭제하시겠습니까?')">삭제</a>
+					</p>
 				</div>
 			</c:forEach>
 			<c:choose>
 				<c:when test="${not empty sessionId}">
 					<!-- 댓글 등록 -->
-					<form action="/reply/insert" method="post" 
-							id="replyform" name="replyform">
+					<form action="/reply/insert" method="post" id="replyform"
+						name="replyform">
 						<input type="hidden" name="boardId" value="${board.id}">
 						<p>
 							<input type="text" name="replyer" value="${sessionId}">
@@ -86,8 +102,8 @@
 				<c:otherwise>
 					<!-- 댓글 등록 로그인 이동 -->
 					<div class="replylogin">
-						<a href="/user/login">
-						<i class="fa-regular fa-user"> 로그인한 사용자만 댓글 등록이 가능합니다.</i>
+						<a href="/user/login"> <i class="fa-regular fa-user"> 로그인한
+								사용자만 댓글 등록이 가능합니다.</i>
 						</a>
 					</div>
 				</c:otherwise>
@@ -96,21 +112,21 @@
 	</div>
 	<jsp:include page="../layout/footer.jsp" />
 
-<script>
-	const checkReply = function(){
-		//alert("댓글 등록");
-		//댓글 등록이 비어있으면 "댓글을 입력해 주세요"
-		//댓글 내용이 있으면 서버에 전송
-		let content = document.getElementById("replyContent");
-		
-		if(content.value == ""){
-			alret("댓글을 입력해 주세요");
-			content.focus();
-			return false;
-		}else{
-			document.replyform.submit();			
+	<script>
+		const checkReply = function() {
+			//alert("댓글 등록");
+			//댓글 등록이 비어있으면 "댓글을 입력해 주세요"
+			//댓글 내용이 있으면 서버에 전송
+			let content = document.getElementById("replyContent");
+
+			if (content.value == "") {
+				alret("댓글을 입력해 주세요");
+				content.focus();
+				return false;
+			} else {
+				document.replyform.submit();
+			}
 		}
-	}	
-</script>
+	</script>
 </body>
 </html>

@@ -14,7 +14,7 @@
 	  <section id="reply_detail">
 		<h2>댓글 수정하기</h2>
 		<form action="/reply/update" method="post">
-		  <input type="hidden" name="boardId" value="${board.id}">
+		  <input type="hidden" name="boardId" value="${reply.boardId}">
 		  <input type="hidden" name="id" value="${reply.id}">
 			<p>
 				<textarea rows="3" cols="50"

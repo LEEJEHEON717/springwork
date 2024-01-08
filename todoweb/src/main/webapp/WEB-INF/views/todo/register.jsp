@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>Todo 등록</h1>
-	<from action="/todo/register" method="post">
+	<form action="/todo/register" method="post">
 		<p>
 			<label>Title</label>
 			<input type="text" name="title">
@@ -21,6 +21,6 @@
 			<input type="submit" value="등록">
 			<input type="reset" value="취소">
 		</p>
-	</from>
+	</form>
 </body>
 </html>

@@ -7,6 +7,19 @@
 <title>index...</title>
 </head>
 <body>
-	<h1>Todo 프로젝트입니다.</h1>
+    <div class="container-fluid">
+        <jsp:include page="layout/header.jsp" />
+        <!-- 본문 영역 -->
+	     <div class="row content">
+	       <div class="col">
+	         <div class="card">
+           		<div class="card-body">
+		   		  <h1 class="my-4">Todo 프로젝트입니다.</h1>
+		   		</div>
+		   	</div>
+		   </div>
+	     </div>
+		<jsp:include page="layout/footer.jsp" />
+	</div>
 </body>
 </html>

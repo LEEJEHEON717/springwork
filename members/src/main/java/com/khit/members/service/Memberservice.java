@@ -17,4 +17,7 @@ public class Memberservice {
 		memberRepository.insert(memberDTO);
 	}
 
+	public MemberDTO login(MemberDTO memberDTO) {	
+		return memberRepository.login(memberDTO);
+	}
 }

@@ -6,6 +6,6 @@
   
 <configuration>
 	<typeAliases>
-		<typeAlias type="com.khit.members.dto.memberDTO" alias="member"/>
+		<typeAlias type="com.khit.members.dto.MemberDTO" alias="member" />
 	</typeAliases>
 </configuration>

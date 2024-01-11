@@ -50,18 +50,18 @@
 		location.href = "/member?id=" + mid;
 	}
 	
-		const deleteFn = function(mid){
+	/* const deleteFn = function(mid){
 		//alert("정말로 삭제하시겠습니까?")
 		return confirm("정말로 삭제하시겠습니까?")
 		location.href = "/member/delete?id=" + mid;
-	}
+	} */
 	
-	/*const deleteFn = function(mid){
+	const deleteFn = function(mid){
 		let confirms = confirm("정말로 삭제하시겠습니까?")
 		if(confirms == true){
 			location.href = "/member/delete?id=" + mid;
 		}
-	}*/
+	}
 </script>
 </body>
 </html>

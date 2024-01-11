@@ -44,4 +44,12 @@ public class Memberservice {
 	}
 	
 
+	public String checkEmail(String email) {
+		MemberDTO memberDTO = memberRepository.findByEmail(email);
+		if(memberDTO == null) { //찾는 객체가 없으면 이메일 사용가능함
+			return "OK";
+		}else {
+			return "NO";
+		}
+	}
 }

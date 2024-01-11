@@ -26,6 +26,10 @@
 	let logout = function(){
 		location.href = "/member/logout";
 	}
+	
+	let updateFn = function(){
+		location.href = "/member/update";
+	}
 </script>
 </body>
 </html>

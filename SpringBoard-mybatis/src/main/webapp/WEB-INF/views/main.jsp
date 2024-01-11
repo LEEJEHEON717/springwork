@@ -15,11 +15,15 @@
 	</h3>
 	
 	<script>
-		const logout = () => {
+		let index = function(){
+			location.href = "/";
+		}
+		
+		let logout = function(){
 			location.href = "/user/logout";
 		}
 		
-		const update = () => {
+		let updateFn = function(){
 			location.href = "/user/update";
 		}
 	
